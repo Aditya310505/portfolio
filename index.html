@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya R. Pawar | Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ffffff; margin: 0; }
+        
+        .hero-bg {
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.4) 100%), 
+                        url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center; height: 100vh;
+        }
+
+        .teal-accent { color: #00d1d1; }
+        
+        /* Navigation Links */
+        .nav-item { cursor: pointer !important; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+        .nav-item:hover { color: #00d1d1; }
+        .nav-item.active { color: #00d1d1; font-weight: bold; }
+
+        /* Hiding/Showing Sections */
+        .section-content { display: none; }
+        .section-content.active { display: block; }
+
+        .btn-style { border: 1px solid #00d1d1; color: #00d1d1; padding: 12px 30px; border-radius: 50px; text-transform: uppercase; font-size: 10px; font-weight: bold; cursor: pointer !important; display: inline-block; text-decoration: none; }
+        .btn-style:hover { background: #00d1d1; color: black; }
+        img { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-[999] px-10 py-6 flex justify-between items-center bg-black/90 backdrop-blur-md border-b border-white/5">
+        <div class="text-[10px] tracking-[0.5em] font-bold">ADITYA R. PAWAR</div>
+        <div class="hidden md:flex space-x-10">
+            <button onclick="showPage('home')" id="btn-home" class="nav-item active">Home</button>
+            <button onclick="showPage('about')" id="btn-about" class="nav-item">About</button>
+            <button onclick="showPage('portfolio')" id="btn-portfolio" class="nav-item">Portfolio</button>
+        </div>
+    </nav>
+
+    <div id="home-page" class="section-content active">
+        <section class="hero-bg flex items-center px-10 md:px-24">
+            <div class="max-w-4xl">
+                <p class="text-xs tracking-[0.5em] uppercase mb-4 text-white/50">AI-Driven Data Analyst</p>
+                <h1 class="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-none mb-10">
+                    ADITYA R.<br><span class="teal-accent">PAWAR</span>
+                </h1>
+                <div class="flex gap-4">
+                    <button onclick="showPage('portfolio')" class="btn-style">Explore Work</button>
+                    <a href="Aditya R. Pawar.pdf" download class="btn-style" style="border-color: white; color: white;">Resume</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="about-page" class="section-content">
+        <section class="py-40 px-10 md:px-24 max-w-5xl">
+            <h2 class="text-[10px] tracking-[0.5em] uppercase teal-accent mb-10">About Me</h2>
+            <p class="text-4xl md:text-6xl font-bold leading-tight mb-12">
+                Data Analyst turning data into <span class="teal-accent">business decisions.</span>
+            </p>
+            <div class="space-y-6 text-xl text-white/60 leading-relaxed mb-16">
+                <p>I specialize in building interactive dashboards and analytical solutions that transform complex data into clear business insights.</p>
+                <p>With hands-on experience in Power BI, SQL, and DAX modeling, I focus on performance tracking, KPI analysis, and decision intelligence.</p>
+                <p>Currently pursuing my degree at Savitribai Phule Pune University, I combine academic learning with real-world analytics projects.</p>
+                <p>My goal is to help organizations move from data collection to data-driven growth.</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="portfolio-page" class="section-content">
+        <section class="py-40 px-10 md:px-24">
+            <h2 class="text-[10px] tracking-[0.5em] uppercase teal-accent mb-20">Selected Work</h2>
+            <div class="space-y-40">
+                <div class="grid md:grid-cols-2 gap-20 items-center">
+                    <div class="space-y-4">
+                        <img src="project1a.png">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="project1b.png"><img src="project1c.png">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-5xl font-black uppercase italic mb-6">Viewer Engagement</h3>
+                        <p class="text-white/50 text-lg">Analysis of 17.5M engagement points to track viewer retention.</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-20 items-center">
+                    <div class="order-2 md:order-1">
+                        <h3 class="text-5xl font-black uppercase italic mb-6">Budget vs Actual</h3>
+                        <p class="text-white/50 text-lg">Financial dashboard tracking 11.97% budget variance.</p>
+                    </div>
+                    <div class="order-1 md:order-2"><img src="project2.png"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-20 items-center">
+                    <div><img src="project3.png"></div>
+                    <div>
+                        <h3 class="text-5xl font-black uppercase italic mb-6">AI in Engineering</h3>
+                        <p class="text-white/50 text-lg">Published research paper at ICAAIE-25.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="py-24 text-center border-t border-white/5">
+        <div class="flex justify-center gap-10 mb-8 text-xl text-white/30">
+            <a href="https://linkedin.com/in/aditya-ravindra-pawar-b0237126b" target="_blank" class="hover:text-[#00d1d1]"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Aditya310505" target="_blank" class="hover:text-[#00d1d1]"><i class="fab fa-github"></i></a>
+            <a href="mailto:adityrpawar3105@gmail.com" class="hover:text-[#00d1d1]"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-[10px] uppercase tracking-widest text-white/20">© 2026 Aditya R. Pawar</p>
+    </footer>
+
+    <script>
+        function showPage(pageName) {
+            // Hide all pages
+            document.getElementById('home-page').classList.remove('active');
+            document.getElementById('about-page').classList.remove('active');
+            document.getElementById('portfolio-page').classList.remove('active');
+
+            // Show selected page
+            document.getElementById(pageName + '-page').classList.add('active');
+
+            // Reset Nav colors
+            document.getElementById('btn-home').classList.remove('active');
+            document.getElementById('btn-about').classList.remove('active');
+            document.getElementById('btn-portfolio').classList.remove('active');
+
+            // Set active Nav color
+            document.getElementById('btn-' + pageName).classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
