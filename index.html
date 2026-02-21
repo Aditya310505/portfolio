@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya R. Pawar | Data Analyst Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ffffff; margin: 0; }
+        
+        .hero-section {
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.4) 100%), 
+                        url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+
+        .teal-accent { color: #00d1d1; }
+        .btn { border: 1px solid #00d1d1; color: #00d1d1; padding: 12px 32px; border-radius: 50px; text-transform: uppercase; font-size: 11px; font-weight: bold; text-decoration: none; transition: 0.3s; display: inline-block; }
+        .btn:hover { background: #00d1d1; color: #000; }
+        .btn-white { border-color: white; color: white; }
+        .btn-white:hover { background: white; color: black; }
+        
+        .project-card img { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); transition: 0.4s; }
+        .project-card img:hover { transform: translateY(-5px); border-color: #00d1d1; }
+        
+        .social-link { font-size: 1.5rem; color: rgba(255,255,255,0.4); transition: 0.3s; }
+        .social-link:hover { color: #00d1d1; transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 px-10 py-6 flex justify-between items-center bg-black/80 backdrop-blur-md border-b border-white/5">
+        <div class="text-[10px] tracking-[0.5em] font-bold">ADITYA R. PAWAR</div>
+        <div class="hidden md:flex space-x-10">
+            <a href="#home" class="text-[10px] uppercase tracking-widest hover:text-[#00d1d1] transition">Home</a>
+            <a href="#portfolio" class="text-[10px] uppercase tracking-widest hover:text-[#00d1d1] transition">Portfolio</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section flex items-center px-10 md:px-24">
+        <div class="max-w-4xl">
+            <p class="text-xs tracking-[0.5em] uppercase mb-4 text-white/60">AI-Driven Data Analyst</p>
+            <h1 class="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-none mb-10">
+                ADITYA R.<br><span class="teal-accent">PAWAR</span>
+            </h1>
+            
+            <div class="flex flex-wrap gap-6 mb-12">
+                <a href="Aditya R. Pawar.pdf" download class="btn btn-white">Download Resume</a>
+                <a href="#portfolio" class="btn">Explore Projects</a>
+            </div>
+
+            <div class="flex gap-8">
+                <a href="https://linkedin.com/in/aditya-ravindra-pawar-b0237126b" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Pawar3105" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="mailto:adityrpawar3105@gmail.com?subject=Portfolio Inquiry" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-32 px-10 md:px-24">
+        <h2 class="text-[10px] tracking-[0.5em] uppercase teal-accent mb-24">Case Studies</h2>
+        
+        <div class="space-y-48">
+            <div class="grid md:grid-cols-2 gap-20 items-center project-card">
+                <div class="space-y-4">
+                    <img src="project1a.png" alt="Viewer Engagement Main">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="project1b.png" alt="Detail 1">
+                        <img src="project1c.png" alt="Detail 2">
+                    </div>
+                </div>
+                <div>
+                    <span class="text-[10px] font-bold teal-accent tracking-widest uppercase">Project 01</span>
+                    <h3 class="text-5xl font-black uppercase italic my-6 leading-tight">Viewer Engagement</h3>
+                    <p class="text-lg text-white/50 leading-relaxed mb-6">
+                        Analyzed 17.5M engagement scores and 34M views. Designed interactive filters to improve content performance strategy and real-time tracking.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-20 items-center project-card">
+                <div class="order-2 md:order-1">
+                    <span class="text-[10px] font-bold teal-accent tracking-widest uppercase">Project 02</span>
+                    <h3 class="text-5xl font-black uppercase italic my-6 leading-tight">Budget vs Actual</h3>
+                    <p class="text-lg text-white/50 leading-relaxed mb-6">
+                        Analyzed 163M budget vs 183M actual spend. Calculated a 20M variance (11.97%) using DAX to identify overspending trends and optimize financial oversight.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="project2.png" alt="Budget vs Actual Dashboard">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-20 items-center project-card">
+                <div>
+                    <img src="project3.png" alt="Research Publication">
+                </div>
+                <div>
+                    <span class="text-[10px] font-bold teal-accent tracking-widest uppercase">Publication</span>
+                    <h3 class="text-5xl font-black uppercase italic my-6 leading-tight">AI in Engineering</h3>
+                    <p class="text-lg text-white/50 leading-relaxed">
+                        Published Research Paper at First International Conference on "Applications of AI in Engineering" (ICAAIE-25).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 text-center border-t border-white/5">
+        <p class="text-[10px] text-white/20 uppercase tracking-[0.6em] mb-6">Let's Connect</p>
+        <a href="mailto:adityrpawar3105@gmail.com?subject=Portfolio Inquiry" class="text-2xl md:text-4xl font-black teal-accent hover:text-white transition">
+            adityrpawar3105@gmail.com
+        </a>
+    </footer>
+
+</body>
+</html>
